@@ -11,7 +11,7 @@ int main(int argc, char *argv[]) {
 		n = atoi(argv[2]);
 	}	
 	if(m*n < 26){ printf("Not enough space in 2D array\n(m*n) should be greater than 26\n");return 0;}
-	printf("Rows: %d\nColumns: %d\n",m,n);
+//	printf("Rows: %d\nColumns: %d\n",m,n);
 	//Initializing Array
 	char arr[m][n];
 	int i = 0,j=0;
@@ -24,7 +24,7 @@ int main(int argc, char *argv[]) {
 	srand(time(NULL));
 	int posm = rand() % m;
 	int posn = rand() % n;	
-	printf("Random Pos m: %d\nRandom Pos n: %d\n",posm,posn);
+//	printf("Random Pos m: %d\nRandom Pos n: %d\n",posm,posn);
 	i = 65;
 	int randm = 0;
 	int check = 0;
@@ -41,7 +41,7 @@ int main(int argc, char *argv[]) {
 			posm -= 1;
 			randm = 1;
 			check +=1;
-			printf("0check: %d\n",check);					
+//			printf("0check: %d\n",check);					
 		}
 		if(randm == 1){ //Move Down
 			posm -= 1;
@@ -55,7 +55,7 @@ int main(int argc, char *argv[]) {
 			posm += 1;
 			randm = 2;					
 			check += 1;
-			printf("1check: %d\n",check);		
+//			printf("1check: %d\n",check);		
 		}
 		if(randm == 2){ //Move Left
 			posn -= 1;
@@ -70,7 +70,7 @@ int main(int argc, char *argv[]) {
 			posn += 1;
 			randm = 3;			
 			check +=1;
-			printf("2check: %d\n",check);		
+//			printf("2check: %d\n",check);		
 		}
 		if(randm == 3) { //Move Right
 			posn += 1;
@@ -85,7 +85,7 @@ int main(int argc, char *argv[]) {
 			posn -= 1;
 			randm = 0;			
 			check +=1;
-			printf("3check: %d\n",check);		
+//			printf("3check: %d\n",check);		
 		}
 		if(check >= 4){
 			break;
